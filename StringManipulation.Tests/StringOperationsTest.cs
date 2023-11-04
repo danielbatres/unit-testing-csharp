@@ -43,5 +43,25 @@ namespace StringManipulation.Tests {
             // Assert
             Assert.False(result);
         }
+
+        [Fact]
+        public void QuantityInWords() {
+            // Arange
+            var strOperations = new StringOperations();
+
+            // Act
+            var result = strOperations.QuantintyInWords("cat", 10);
+
+            // Assert
+            Assert.StartsWith("diez", result);
+            Assert.Contains("cat", result);
+        }
+
+        [Fact]
+        public void GetStringLength_Exception() {
+            var strOperations = new StringOperations();
+
+            Assert.ThrowsAny<ArgumentNullException>(() => strOperations.GetStringLength(null));
+        }
     }
 }
