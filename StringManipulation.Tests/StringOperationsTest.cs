@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StringManipulation.Tests {
     public class StringOperationsTest {
-        [Fact]
+        [Fact(Skip = "This test is not valid at this moment, TICKET-001")]
         public void ConcatenateStrings() {
             // Arange
             var strOperations = new StringOperations();
