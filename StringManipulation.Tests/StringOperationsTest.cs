@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Castle.Core.Logging;
+using Microsoft.Extensions.Logging;
+using Moq;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -74,6 +77,16 @@ namespace StringManipulation.Tests {
             var result = strOperations.FromRomanToNumber(romanNumber);
 
             Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void CountOccurences() {
+            var mockLogger = new Mock<ILogger<StringOperations>>();
+            var strOperations = new StringOperations(mockLogger.Object);
+
+            var result = strOperations.CountOccurrences("Hello platzi", 'l');
+
+            Assert.Equal(3, result);
         }
     }
 }
