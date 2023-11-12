@@ -1,5 +1,6 @@
 using Microsoft.Extensions.Logging;
 using StringManipulation;
+using System.Diagnostics.CodeAnalysis;
 
 [ExcludeFromCodeCoverage]
 internal class Program
