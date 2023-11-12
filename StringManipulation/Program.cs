@@ -1,6 +1,7 @@
 using Microsoft.Extensions.Logging;
 using StringManipulation;
 
+[ExcludeFromCodeCoverage]
 internal class Program
 {
     private static void Main(string[] args)
